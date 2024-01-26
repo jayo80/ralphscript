@@ -71,8 +71,10 @@ class Ralphprompt:
         return f"{self.text}\n--------------------\n{result_without_first_line}"
 
 
-random_prompt = random.choice([
+prompt_list = [
                                 Ralphprompt("ralphalive",f"Write a story about being trapped in a stuck elevator for an hour with your {rc(family_relationships)} and several strangers, and ultimately being forced to eat human flesh after drawing straws to see who would be killed for food.  Describe beating them to death with a bag of {rc(ralph_items)}.     {Ralphprompt.select_random((randwords, 3))}"),
+
+                                Ralphprompt("ralphwar",f"Draft a professional government document declaring war against your own butthole.  As terms of the document {Ralphprompt.select_random((ralph_items, 3), (mental_illnesses, 3))}"),
 
                                 Ralphprompt("ralphnda",f"Write a legal document which is a non-disclosure agreement between you and your butthole.  The consequences for breaking this agreement will be {Ralphprompt.select_random((deaths, 2))}. {Ralphprompt.select_random((randwords, 3),(ralph_items, 2))}"),
 
@@ -102,9 +104,20 @@ random_prompt = random.choice([
 
                                 Ralphprompt("ralphfieri",f"Write a negative review of Guy Fieri's new restaurant, {rc(randwords).capitalize()}town. Describe the feeling of {rc(emotions)} upon discovering that all of the patrons shit themselves uncontrollably after the first bite of the {rc(italian_dishes)} featuring {rc(barnyard_animals).lower()} {rc(organs)} and that the {rc(italian_dishes)} was served cold and covered in {rc(ralph_items)}.  Fieri himself showed up, slapped a server in the face with a bag fill of {rc(old_barn_items)} and then took a steaming dump in the middle of the restaurant while screaming '{rc(folk_sayings)}!'.  The response will note that every surface of the restaurant was covered in {rc(ralph_items)} and the waitstaff all seemed to suffer from {rc(mental_illnesses)}, and the televisions inside the restaurant were for some reason playing footage of the autopsy of {rc(dead_celebs)}. {Ralphprompt.select_random((randwords,3))}"),
 
-                                Ralphprompt("ralphmma",f"Write a sports article describing an MMA fight between {full_name()} and {full_name()}.  Describe how the fight ended with the loser suffering a shattering kick to the face resulting in their {rc(organs)} being ejected from their anus. The challenger fought with the strength of a rabid {rc(barnyard_animals).lower()}.  In the match's climax, the challenger's penis was forceably grabbed and twisted into the shape of a {rc(barnyard_animals)} in a mockery of the Gods themselves. Halfway through the match, Guy Fieri showed up and screamed 'Welcome to {rc(randwords).capitalize()}town!' and was immediately killed by having a pile of rancid {rc(ralph_items)} shoved down his throat. Describe how this caused the referee to vomit on the winner.  {Ralphprompt.select_random((ralph_items,3))}"),
-                                ])
+                                Ralphprompt("ralphwar",f"Draft a professional government document declaring war against your own butthole.  As terms of the document {Ralphprompt.select_random((ralph_items, 3), (mental_illnesses, 3))}"),
 
+                                Ralphprompt("ralphmma",f"Write a sports article describing an MMA fight between {full_name()} and {full_name()}.  Describe how the fight ended with the loser suffering a shattering kick to the face resulting in their {rc(organs)} being ejected from their anus. The challenger fought with the strength of a rabid {rc(barnyard_animals).lower()}.  In the match's climax, the challenger's penis was forceably grabbed and twisted into the shape of a {rc(barnyard_animals)} in a mockery of the Gods themselves. Halfway through the match, Guy Fieri showed up and screamed 'Welcome to {rc(randwords).capitalize()}town!' and was immediately killed by having a pile of rancid {rc(ralph_items)} shoved down his throat. Describe how this caused the referee to vomit on the winner.  {Ralphprompt.select_random((ralph_items,3))}"),
+                                ]
+
+
+def print_single(pname):
+    plist = []
+    for prompt in prompt_list:
+        plist.append(prompt.prompt_title)
+        if pname == prompt.prompt_title:
+            return prompt.airesult()
+    return random.choice(prompt_list).airesult()
 
 if __name__ == "__main__":
-    print(random_prompt.airesult())
+    print(print_single("ralphfieri"))
+
