@@ -77,6 +77,7 @@ ralph_items = [
     "frozen corndogs",
     "sporks",
     "goddamn bananas",
+    "dildos",
     "urine",
     "filth",
     "hobo teeth",
@@ -88,6 +89,7 @@ ralph_items = [
     "pubes",
     "uranium",
     "radium",
+    "asbestos",
 ]
 
 old_barn_items = [
@@ -287,6 +289,7 @@ mythical_creatures = [
     "Kraken",
     "Chimera",
     "Pegasus",
+    "Chuck Norris",
     "Yeti",
     "Siren",
     "Gorgon",
@@ -536,11 +539,11 @@ fantasy_characters = [
     "griffin",
     "cyclops",
     "medusa",
+    "Chuck Norris",
     "chimera",
     "kraken",
     "harpy",
     "golem",
-    "elemental",
 ]
 
 tv_shows_1970s = ['All in the Family', 'M*A*S*H', 'Happy Days', 'The Mary Tyler Moore Show', 'The Waltons', 'The Jeffersons', 'The Love Boat', 'Three\'s Company', 'Good Times', 'The Brady Bunch', 'Charlie\'s Angels', 'Little House on the Prairie', 'The Six Million Dollar Man', 'Baretta', 'Kojak', 'The Rockford Files', 'Starsky & Hutch', 'Emergency!', 'The Dukes of Hazzard', 'Welcome Back, Kotter', 'Family Matters', 'Saved By The Bell', 'Full House']
@@ -747,15 +750,13 @@ randwords = [
     'fart',
     'penis',
     'diarrhea',
-    'rancid',
+    'flatulence',
     'mildew',
     'rot',
     'plague',
     'desecration',
     'scum',
-    'hideous',
     'anger',
-    'satan',
     'evisceration',
     'diaper',
     'autopsy',

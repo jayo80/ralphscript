@@ -96,7 +96,7 @@ class Ralphprompt:
 
 
 prompt_list = [
-                                Ralphprompt("ralphalive",f"Write a story about being trapped in a stuck elevator for an hour with your {rc(family_relationships)} and several strangers, and ultimately being forced to eat human flesh after drawing straws to see who would be killed for food.  Describe beating them to death with a bag of {rc(ralph_items)}.     {Ralphprompt.select_random((randwords, 3))}"),
+                                Ralphprompt("ralphalive",f"Write a story about being trapped in a stuck elevator for an hour with your {rc(family_relationships)} and several strangers, and ultimately being forced to eat human flesh after drawing straws to see who would be killed for food.  Describe beating them to death with a bag of {rc(ralph_items)}. {Ralphprompt.select_random((randwords, 3))}"),
 
                                 Ralphprompt("ralphwar",f"Draft a professional government document declaring war against your own butthole.  As terms of the document {Ralphprompt.select_random((ralph_items, 3), (mental_illnesses, 3))}"),
 
@@ -162,7 +162,23 @@ prompt_list = [
 
                                 Ralphprompt("ralphwwi",f"Write a term paper on the causes of World War I, {Ralphprompt.select_random((ralph_items, 2), (randwords, 3))}"),
 
-                                Ralphprompt("ralphpoa",f"Draw up a legal document granting power of attorney to your own butthole.  {Ralphprompt.select_random((deaths,2),(ralph_items,3),(randwords,4))}")
+                                Ralphprompt("ralphpoa",f"Draw up a legal document granting power of attorney to your own butthole.  {Ralphprompt.select_random((deaths,2),(ralph_items,3),(randwords,4))}"),
+
+                                Ralphprompt("ralphfam",f"write an angry hate letter to your {rc(family_relationships)}.  Compare them to pile of rotting {rc(ralph_items)}.  {Ralphprompt.select_random((felonies,2),(tv_shows_1970s,1),(fantasy_characters,2),(cleaning_items,2),(common_ailments,2),(hospital_items,2))}"),
+
+                                Ralphprompt("ralphresume",f"write a cover letter for a job as a {rc(ralph_items)} salesman.  The cover letter will include admission to having previously been convicted of {rc(felonies)}, {rc(felonies)}, {rc(felonies)}, and indecency with a {rc(rodents)}.  Admit that you do not thrive in a fast-paced environment and have been known to randomly attack co-workers with a {rc(gardening_tools)}.  Admit that you have no personal experience in any field other than training {rc(common_insects)} to attack small children. Threaten to curse the hiring manager with black magic if not hired.  The results of the curse will be {Ralphprompt.select_random((mental_illnesses,3))} "),
+
+                                Ralphprompt("ralphsermon",f"Write a fiery, sermon containing much profanity.  The sermon will demand that people convert to Ralph's new religion, The Church Of The {Ralphprompt.bandname('poemfodder.txt')}.  Ralph will demand that all adherents burn all of their worldly posessions except for a trash bag full of {rc(ralph_items)}, which they are to keep as a pet.  The text will include a description of the church's most holy sacrament, the commission of {rc(felonies)}.  Describe in detail the virtues of the church's most holy saint, St. {full_name()}.  Extoll at great length the virtuousness of unrelenting diarrhea.  Initiates will have to pass the ultimate test of purity:  watching reruns of {rc(tv_shows_1970s)} for three days straight while locked inside of a port-o-potty. Using elaborate, archaic language, Include an elaborate, nonsensical rant stating that nonbelievers will suffer {rc(deaths)}, {rc(deaths)}, and {rc(common_ailments)}"),
+
+                                Ralphprompt("ralphfreedom",f"Write a letter to the governor of {rc(states)} announcing that you and your butthole are seceding from the United States.  Draw up your own constitution and bill of rights in which the right to soil oneself in any place or situation will be paramount, and that the currency of your new nation will be {rc(ralph_items)}.  Use arcane, archaic, and elaborate language in the response.  Create a name and slogan for your new country.  {Ralphprompt.select_random((mental_illnesses,3),(ralph_items,3),(randwords,4))}"),
+
+                                Ralphprompt("ralphdetstory",f"write a detective story called 'The Case Of The Missing {rc(ralph_items).capitalize()}'.  The story will be about a detective named {full_name()}.  {Ralphprompt.select_random((ralph_items,2),(deaths,3),(randwords,4),(felonies,2))}"),
+
+                                Ralphprompt("ralphgun",f"Write a glowing review of a first-person shooter video game called 'Call Of {rc(badthings).title()}. Describe your favorite weapon which is a rifle.  Make up a name for the rifle using no more than two words from the following text: '{Ralphprompt.generate_text('36cannibals.txt')}'.  {Ralphprompt.select_random((barnyard_animals,3),(fantasy_characters,3))} to be used as inspiration for the name."),
+
+                                Ralphprompt("ralphweed",f"Write an enthusiastic article about a new strain of Cannabis called '{rc(mythical_creatures).title()} {rc(randwords).title()}'.  Note that the side effects may include {rc(mental_illnesses)}.  Describe the flavor as a mixture of {rc(ralph_items)} and {rc(industrial_solvents).title()}. {Ralphprompt.select_random((randwords,4),(fantasy_characters,3))}"),
+
+                                Ralphprompt("ralphprediction",f"Write a dire prophecy of the future.  Predict a flood of diarrhea will overwhelm {rc(states)} and that the vengeful ghost of {rc(us_presidents_1800s)} will curse its populace with {rc(mental_illnesses)}.  Only those who build an altar to you out of {rc(ralph_items)} will be spared.  {Ralphprompt.select_random((randwords,5),(barnyard_animals,3))}.  Use elaborate, archaic language to describe the prophecy.")
 
                                 ]
 
@@ -176,6 +192,6 @@ def print_single(pname):
     return random.choice(prompt_list).airesult()
 
 if __name__ == "__main__":
-    print(print_single("rando"))
+    print(print_single("ralphweed"))
 
 
